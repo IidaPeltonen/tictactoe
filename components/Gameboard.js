@@ -29,12 +29,12 @@ export default function Gameboard () {
             key={x * NBR_OF_COLS + y}
             name={board[x * NBR_OF_COLS + y]}
             size={32}
-            color={chooseItemColor[x * NBR_OF_COLS + y]}
+            color={chooseItemColor(x * NBR_OF_COLS + y)}
           />
         </Pressable>
       )
     }
-    let row = <View key={row + x}>{cols.map(item => item)}</View>
+    let row = <View key={"row" + x}>{cols.map(item => item)}</View>
     items.push(row)
   }
 
